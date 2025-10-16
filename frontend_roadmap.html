@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap de Desenvolvimento Frontend Moderno</title>
+    <link rel="stylesheet" href="frontend_roadmap.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🗺️ Roadmap de Desenvolvimento Frontend Moderno</h1>
+            <p class="subtitle">Stack completo de tecnologias frontend para 2025</p>
+            
+            <!-- Search/Filter Bar -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="🔍 Buscar tecnologias por nome ou categoria..."
+                    aria-label="Buscar tecnologias"
+                />
+                <span id="searchResults" class="search-results"></span>
+            </div>
+            
+            <div class="header-actions">
+                <button id="toggleTheme" class="btn-theme" aria-label="Alternar tema">
+                    🌙 Tema Escuro
+                </button>
+                <button id="toggleFocusMode" class="btn-focus" aria-label="Modo de estudo focado">
+                    🎯 Modo Focado
+                </button>
+                <button id="showStats" class="btn-stats" aria-label="Ver estatísticas">
+                    📊 Estatísticas
+                </button>
+                <button id="exportJSON" class="btn-export" aria-label="Exportar progresso como JSON">
+                    📄 Exportar JSON
+                </button>
+                <button id="exportPDF" class="btn-export" aria-label="Exportar progresso como PDF">
+                    📑 Exportar PDF
+                </button>
+                <button id="resetProgress" class="btn-reset" aria-label="Resetar progresso">
+                    🔄 Resetar Progresso
+                </button>
+                <div class="progress-stats">
+                    <span id="progressText">Progresso: 0%</span>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Roadmap Container -->
+        <div id="roadmapContainer" class="roadmap-container">
+            <!-- Core Foundations -->
+            <div class="roadmap-section" data-section="core">
+                <h2 class="section-title">Fundamentos Essenciais</h2>
+                <div class="nodes-container">
+                    <!-- HTML5 -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="html5">
+                            <span class="node-icon">📄</span>
+                            <span class="node-label">HTML5</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="semantic-html">Semantic HTML</div>
+                            <div class="node sub-node" data-tech="web-accessibility">Web Accessibility (A11y)</div>
+                            <div class="node sub-node" data-tech="seo-practices">SEO Best Practices</div>
+                            <div class="node sub-node" data-tech="progressive-enhancement">Progressive Enhancement</div>
+                        </div>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="css3">
+                            <span class="node-icon">🎨</span>
+                            <span class="node-label">CSS3 & Modern CSS</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="flexbox-grid">Flexbox & CSS Grid</div>
+                            <div class="node sub-node" data-tech="css-custom-properties">CSS Custom Properties</div>
+                            <div class="node sub-node" data-tech="container-queries">Container Queries</div>
+                            <div class="node sub-node" data-tech="cascade-layers">Cascade Layers</div>
+                            <div class="node sub-node" data-tech="logical-properties">Logical Properties</div>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="javascript">
+                            <span class="node-icon">⚡</span>
+                            <span class="node-label">JavaScript (ES6+)</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="modern-syntax">Modern Syntax (ES2023+)</div>
+                            <div class="node sub-node" data-tech="async-await">Async/Await & Promises</div>
+                            <div class="node sub-node" data-tech="esm-modules">Modules (ESM)</div>
+                            <div class="node sub-node" data-tech="web-apis">Web APIs</div>
+                            <div class="node sub-node" data-tech="typescript">TypeScript</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Frameworks -->
+            <div class="roadmap-section" data-section="frameworks">
+                <h2 class="section-title">Frameworks & Bibliotecas Frontend</h2>
+                <div class="nodes-container">
+                    <!-- React -->
+                    <div class="node-group">
+                        <div class="node main-node framework-react" data-tech="react">
+                            <span class="node-icon">⚛️</span>
+                            <span class="node-label">Ecossistema React</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="react18">React 18+ (Concurrent Features)</div>
+                            <div class="node sub-node" data-tech="nextjs">Next.js 14+ (App Router)</div>
+                            <div class="node sub-node" data-tech="remix">Remix</div>
+                            <div class="node sub-node" data-tech="react-state">State Management (Redux, Zustand, Jotai)</div>
+                            <div class="node sub-node" data-tech="react-query">React Query/TanStack Query</div>
+                        </div>
+                    </div>
+
+                    <!-- Vue -->
+                    <div class="node-group">
+                        <div class="node main-node framework-vue" data-tech="vue">
+                            <span class="node-icon">💚</span>
+                            <span class="node-label">Ecossistema Vue</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="vue3">Vue 3 (Composition API)</div>
+                            <div class="node sub-node" data-tech="nuxt3">Nuxt 3</div>
+                            <div class="node sub-node" data-tech="pinia">Pinia (State Management)</div>
+                            <div class="node sub-node" data-tech="vue-router">Vue Router</div>
+                        </div>
+                    </div>
+
+                    <!-- Angular -->
+                    <div class="node-group">
+                        <div class="node main-node framework-angular" data-tech="angular">
+                            <span class="node-icon">🅰️</span>
+                            <span class="node-label">Ecossistema Angular</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="angular17">Angular 17+</div>
+                            <div class="node sub-node" data-tech="signals">Signals</div>
+                            <div class="node sub-node" data-tech="rxjs">RxJS</div>
+                            <div class="node sub-node" data-tech="ngrx">NgRx/Service Management</div>
+                        </div>
+                    </div>
+
+                    <!-- Emerging Frameworks -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="emerging">
+                            <span class="node-icon">🚀</span>
+                            <span class="node-label">Frameworks Emergentes</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="svelte">Svelte & SvelteKit</div>
+                            <div class="node sub-node" data-tech="solidjs">Solid.js</div>
+                            <div class="node sub-node" data-tech="qwik">Qwik</div>
+                            <div class="node sub-node" data-tech="astro">Astro (Islands Architecture)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Build Tools -->
+            <div class="roadmap-section" data-section="build">
+                <h2 class="section-title">Ferramentas de Build & Ambiente de Desenvolvimento</h2>
+                <div class="nodes-container">
+                    <!-- Build Systems -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="build-systems">
+                            <span class="node-icon">🔧</span>
+                            <span class="node-label">Sistemas de Build</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="vite">Vite</div>
+                            <div class="node sub-node" data-tech="webpack">Webpack 5</div>
+                            <div class="node sub-node" data-tech="parcel">Parcel</div>
+                            <div class="node sub-node" data-tech="turbopack">Turbopack</div>
+                        </div>
+                    </div>
+
+                    <!-- Package Managers -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="package-managers">
+                            <span class="node-icon">📦</span>
+                            <span class="node-label">Gerenciadores de Pacotes</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="npm">npm</div>
+                            <div class="node sub-node" data-tech="yarn">yarn (berry)</div>
+                            <div class="node sub-node" data-tech="pnpm">pnpm</div>
+                        </div>
+                    </div>
+
+                    <!-- Development Tools -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="dev-tools">
+                            <span class="node-icon">🛠️</span>
+                            <span class="node-label">Ferramentas de Desenvolvimento</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="vscode">VS Code & Extensions</div>
+                            <div class="node sub-node" data-tech="chrome-devtools">Chrome DevTools</div>
+                            <div class="node sub-node" data-tech="framework-devtools">React/Vue DevTools</div>
+                            <div class="node sub-node" data-tech="eslint-prettier">ESLint & Prettier</div>
+                            <div class="node sub-node" data-tech="husky">Husky Git Hooks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Styling Solutions -->
+            <div class="roadmap-section" data-section="styling">
+                <h2 class="section-title">Soluções de Estilização</h2>
+                <div class="nodes-container">
+                    <!-- CSS Frameworks -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="css-frameworks">
+                            <span class="node-icon">💅</span>
+                            <span class="node-label">Frameworks CSS</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="tailwind">Tailwind CSS</div>
+                            <div class="node sub-node" data-tech="css-in-js">CSS-in-JS (Styled-components, Emotion)</div>
+                            <div class="node sub-node" data-tech="unocss">UnoCSS</div>
+                            <div class="node sub-node" data-tech="panda-css">Panda CSS</div>
+                        </div>
+                    </div>
+
+                    <!-- UI Libraries -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="ui-libraries">
+                            <span class="node-icon">🧩</span>
+                            <span class="node-label">Bibliotecas UI & Componentes</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="shadcn">Shadcn/ui</div>
+                            <div class="node sub-node" data-tech="radix">Radix UI (Headless)</div>
+                            <div class="node sub-node" data-tech="mui">Material-UI (MUI)</div>
+                            <div class="node sub-node" data-tech="chakra">Chakra UI</div>
+                            <div class="node sub-node" data-tech="antd">Ant Design</div>
+                        </div>
+                    </div>
+
+                    <!-- CSS Architecture -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="css-architecture">
+                            <span class="node-icon">🏗️</span>
+                            <span class="node-label">Arquitetura CSS</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="bem">BEM Methodology</div>
+                            <div class="node sub-node" data-tech="css-modules">CSS Modules</div>
+                            <div class="node sub-node" data-tech="utility-first">Utility-First CSS</div>
+                            <div class="node sub-node" data-tech="design-systems">Design Systems</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- State Management -->
+            <div class="roadmap-section" data-section="state">
+                <h2 class="section-title">Gerenciamento de Estado & Busca de Dados</h2>
+                <div class="nodes-container">
+                    <!-- Client State -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="client-state">
+                            <span class="node-icon">🔄</span>
+                            <span class="node-label">Estado do Cliente</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="zustand">Zustand</div>
+                            <div class="node sub-node" data-tech="jotai">Jotai</div>
+                            <div class="node sub-node" data-tech="redux-toolkit">Redux Toolkit</div>
+                            <div class="node sub-node" data-tech="context-api">Context API</div>
+                            <div class="node sub-node" data-tech="signals-state">Signals</div>
+                        </div>
+                    </div>
+
+                    <!-- Server State -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="server-state">
+                            <span class="node-icon">🌐</span>
+                            <span class="node-label">Estado do Servidor</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="tanstack-query">TanStack Query (React Query)</div>
+                            <div class="node sub-node" data-tech="swr">SWR</div>
+                            <div class="node sub-node" data-tech="apollo">Apollo Client (GraphQL)</div>
+                            <div class="node sub-node" data-tech="rtk-query">RTK Query</div>
+                        </div>
+                    </div>
+
+                    <!-- Data Flow -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="data-flow">
+                            <span class="node-icon">🔀</span>
+                            <span class="node-label">Padrões de Fluxo de Dados</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="prop-drilling">Soluções para Prop Drilling</div>
+                            <div class="node sub-node" data-tech="global-local">Estado Global vs Local</div>
+                            <div class="node sub-node" data-tech="xstate">State Machines (XState)</div>
+                            <div class="node sub-node" data-tech="optimistic">Optimistic Updates</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance -->
+            <div class="roadmap-section" data-section="performance">
+                <h2 class="section-title">Performance & Otimização</h2>
+                <div class="nodes-container">
+                    <!-- Core Web Vitals -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="core-vitals">
+                            <span class="node-icon">⚡</span>
+                            <span class="node-label">Core Web Vitals</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="lcp">LCP (Largest Contentful Paint)</div>
+                            <div class="node sub-node" data-tech="fid">FID (First Input Delay)</div>
+                            <div class="node sub-node" data-tech="cls">CLS (Cumulative Layout Shift)</div>
+                            <div class="node sub-node" data-tech="inp">INP (Interaction to Next Paint)</div>
+                        </div>
+                    </div>
+
+                    <!-- Optimization Techniques -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="optimization">
+                            <span class="node-icon">🚀</span>
+                            <span class="node-label">Técnicas de Otimização</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="code-splitting">Code Splitting</div>
+                            <div class="node sub-node" data-tech="lazy-loading">Lazy Loading</div>
+                            <div class="node sub-node" data-tech="image-optimization">Otimização de Imagens</div>
+                            <div class="node sub-node" data-tech="bundle-analysis">Análise de Bundle</div>
+                            <div class="node sub-node" data-tech="caching">Estratégias de Cache</div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Tools -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="perf-tools">
+                            <span class="node-icon">🔍</span>
+                            <span class="node-label">Ferramentas de Performance</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="lighthouse">Lighthouse CI</div>
+                            <div class="node sub-node" data-tech="webpagetest">WebPageTest</div>
+                            <div class="node sub-node" data-tech="vitals-monitoring">Core Web Vitals Monitoring</div>
+                            <div class="node sub-node" data-tech="react-profiler">React Profiler</div>
+                            <div class="node sub-node" data-tech="chrome-perf">Chrome Performance Tab</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing -->
+            <div class="roadmap-section" data-section="testing">
+                <h2 class="section-title">Estratégias de Testes</h2>
+                <div class="nodes-container">
+                    <!-- Unit Testing -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="unit-testing">
+                            <span class="node-icon">🧪</span>
+                            <span class="node-label">Testes Unitários</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="vitest">Vitest</div>
+                            <div class="node sub-node" data-tech="jest">Jest</div>
+                            <div class="node sub-node" data-tech="rtl">React Testing Library</div>
+                            <div class="node sub-node" data-tech="vtu">Vue Test Utils</div>
+                            <div class="node sub-node" data-tech="testing-library">Testing Library</div>
+                        </div>
+                    </div>
+
+                    <!-- Component Testing -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="component-testing">
+                            <span class="node-icon">🎭</span>
+                            <span class="node-label">Testes de Componentes</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="storybook">Storybook</div>
+                            <div class="node sub-node" data-tech="chromatic">Chromatic</div>
+                            <div class="node sub-node" data-tech="visual-regression">Visual Regression Testing</div>
+                            <div class="node sub-node" data-tech="cdd">Component-Driven Development</div>
+                        </div>
+                    </div>
+
+                    <!-- E2E Testing -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="e2e-testing">
+                            <span class="node-icon">🎯</span>
+                            <span class="node-label">Testes E2E</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="playwright">Playwright</div>
+                            <div class="node sub-node" data-tech="cypress">Cypress</div>
+                            <div class="node sub-node" data-tech="puppeteer">Puppeteer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modern Web Capabilities -->
+            <div class="roadmap-section" data-section="modern-web">
+                <h2 class="section-title">Capacidades Web Modernas</h2>
+                <div class="nodes-container">
+                    <!-- PWA -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="pwa">
+                            <span class="node-icon">📱</span>
+                            <span class="node-label">PWA (Progressive Web Apps)</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="service-workers">Service Workers</div>
+                            <div class="node sub-node" data-tech="web-manifest">Web App Manifest</div>
+                            <div class="node sub-node" data-tech="offline-first">Offline-First</div>
+                        </div>
+                    </div>
+
+                    <!-- Web APIs -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="web-apis-modern">
+                            <span class="node-icon">🔌</span>
+                            <span class="node-label">Web APIs Modernas</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="web-components">Web Components</div>
+                            <div class="node sub-node" data-tech="websockets">WebSockets</div>
+                            <div class="node sub-node" data-tech="webrtc">WebRTC</div>
+                            <div class="node sub-node" data-tech="intersection-observer">Intersection Observer</div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Features -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="advanced-features">
+                            <span class="node-icon">✨</span>
+                            <span class="node-label">Recursos Avançados</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="wasm">WebAssembly (WASM)</div>
+                            <div class="node sub-node" data-tech="web-workers">Web Workers</div>
+                            <div class="node sub-node" data-tech="indexeddb">IndexedDB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deployment & DevOps -->
+            <div class="roadmap-section" data-section="deployment">
+                <h2 class="section-title">Deployment & DevOps</h2>
+                <div class="nodes-container">
+                    <!-- Hosting Platforms -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="hosting">
+                            <span class="node-icon">☁️</span>
+                            <span class="node-label">Plataformas de Hospedagem</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="vercel">Vercel</div>
+                            <div class="node sub-node" data-tech="netlify">Netlify</div>
+                            <div class="node sub-node" data-tech="cloudflare">Cloudflare Pages</div>
+                            <div class="node sub-node" data-tech="aws">AWS (S3, CloudFront)</div>
+                        </div>
+                    </div>
+
+                    <!-- CI/CD -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="cicd">
+                            <span class="node-icon">🔁</span>
+                            <span class="node-label">Pipelines CI/CD</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="github-actions">GitHub Actions</div>
+                            <div class="node sub-node" data-tech="gitlab-ci">GitLab CI</div>
+                            <div class="node sub-node" data-tech="jenkins">Jenkins</div>
+                        </div>
+                    </div>
+
+                    <!-- Monitoring -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="monitoring">
+                            <span class="node-icon">📊</span>
+                            <span class="node-label">Monitoramento & Analytics</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="sentry">Sentry</div>
+                            <div class="node sub-node" data-tech="datadog">Datadog</div>
+                            <div class="node sub-node" data-tech="analytics">Google Analytics / Plausible</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Development -->
+            <div class="roadmap-section" data-section="mobile">
+                <h2 class="section-title">Desenvolvimento Mobile</h2>
+                <div class="nodes-container">
+                    <!-- Cross-Platform -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="cross-platform">
+                            <span class="node-icon">📲</span>
+                            <span class="node-label">Multiplataforma</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="react-native">React Native</div>
+                            <div class="node sub-node" data-tech="flutter">Flutter</div>
+                            <div class="node sub-node" data-tech="ionic">Ionic</div>
+                        </div>
+                    </div>
+
+                    <!-- PWA Mobile -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="pwa-mobile">
+                            <span class="node-icon">📱</span>
+                            <span class="node-label">PWA para Mobile</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="app-install">Instalação de App</div>
+                            <div class="node sub-node" data-tech="push-notifications">Push Notifications</div>
+                        </div>
+                    </div>
+
+                    <!-- Native Integration -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="native-integration">
+                            <span class="node-icon">🔗</span>
+                            <span class="node-label">Integração Nativa</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="capacitor">Capacitor</div>
+                            <div class="node sub-node" data-tech="cordova">Cordova</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflow & Collaboration -->
+            <div class="roadmap-section" data-section="workflow">
+                <h2 class="section-title">Workflow de Desenvolvimento & Colaboração</h2>
+                <div class="nodes-container">
+                    <!-- Version Control -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="version-control">
+                            <span class="node-icon">📚</span>
+                            <span class="node-label">Controle de Versão</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="git">Git</div>
+                            <div class="node sub-node" data-tech="github">GitHub</div>
+                            <div class="node sub-node" data-tech="gitlab">GitLab</div>
+                        </div>
+                    </div>
+
+                    <!-- Project Management -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="project-mgmt">
+                            <span class="node-icon">📋</span>
+                            <span class="node-label">Gestão de Projetos</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="jira">Jira</div>
+                            <div class="node sub-node" data-tech="linear">Linear</div>
+                            <div class="node sub-node" data-tech="trello">Trello</div>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration Tools -->
+                    <div class="node-group">
+                        <div class="node main-node" data-tech="collaboration">
+                            <span class="node-icon">💬</span>
+                            <span class="node-label">Ferramentas de Colaboração</span>
+                            <span class="completion-badge">✓</span>
+                        </div>
+                        <div class="sub-nodes">
+                            <div class="node sub-node" data-tech="slack">Slack</div>
+                            <div class="node sub-node" data-tech="discord">Discord</div>
+                            <div class="node sub-node" data-tech="notion">Notion</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Focus Mode -->
+    <div id="focusModal" class="modal">
+        <div class="modal-content modal-focus">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <div id="focusBody" class="modal-body focus-mode-body">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+            <div class="focus-navigation">
+                <button id="focusPrev" class="btn-focus-nav" aria-label="Tecnologia anterior">
+                    ← Anterior
+                </button>
+                <span id="focusCounter" class="focus-counter"></span>
+                <button id="focusNext" class="btn-focus-nav" aria-label="Próxima tecnologia">
+                    Próximo →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Statistics -->
+    <div id="statsModal" class="modal">
+        <div class="modal-content modal-wide">
+            <button class="modal-close" aria-label="Fechar" onclick="document.getElementById('statsModal').classList.remove('active')">&times;</button>
+            <div id="statsBody" class="modal-body">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Technology Details -->
+    <div id="techModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <div id="modalBody" class="modal-body">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🗺️ Roadmap de Desenvolvimento Frontend Moderno 2025</p>
+            <p>Seu progresso é salvo automaticamente no navegador</p>
+        </div>
+    </footer>
+
+    <script src="frontend_roadmap.js"></script>
+</body>
+</html>

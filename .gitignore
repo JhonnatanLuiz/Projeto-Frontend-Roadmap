@@ -1,0 +1,23 @@
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+
+# Node modules (se adicionar npm no futuro)
+node_modules/
+package-lock.json
+
+# Build outputs (se adicionar build process)
+dist/
+build/
