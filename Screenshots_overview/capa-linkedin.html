@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Capa - Frontend Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0f0f0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Capa LinkedIn - Dimensões oficiais */
+        .linkedin-cover {
+            width: 1584px;
+            height: 396px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        /* Versão responsiva para visualização */
+        @media (max-width: 1600px) {
+            .linkedin-cover {
+                width: 100%;
+                max-width: 1200px;
+                height: auto;
+                aspect-ratio: 4/1;
+            }
+        }
+
+        /* Grid de fundo decorativo */
+        .cover-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        /* Conteúdo principal */
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 80px;
+            color: white;
+        }
+
+        .cover-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .cover-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            letter-spacing: -2px;
+        }
+
+        .cover-subtitle {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .cover-features {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .feature-badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cover-stats {
+            display: flex;
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: block;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Decoração lateral */
+        .cover-decoration {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        /* Autor */
+        .cover-author {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            text-align: right;
+        }
+
+        .author-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .author-role {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Botão de Download */
+        .download-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .instructions {
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 30px;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .instructions h2 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .instructions code {
+            background: rgba(0,0,0,0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Capa LinkedIn -->
+    <div id="linkedinCover" class="linkedin-cover">
+        <div class="cover-grid"></div>
+        <div class="cover-decoration"></div>
+        
+        <div class="cover-content">
+            <div class="cover-icon">🗺️</div>
+            
+            <h1 class="cover-title">Frontend Roadmap 2025</h1>
+            <p class="cover-subtitle">Stack Completo de Tecnologias Frontend Moderno</p>
+            
+            <div class="cover-features">
+                <div class="feature-badge">
+                    <span>✨</span>
+                    <span>60+ Tecnologias</span>
+                </div>
+                <div class="feature-badge">
+                    <span>📊</span>
+                    <span>Sistema de Progresso</span>
+                </div>
+                <div class="feature-badge">
+                    <span>🔍</span>
+                    <span>Busca Inteligente</span>
+                </div>
+                <div class="feature-badge">
+                    <span>⚡</span>
+                    <span>100% Vanilla JS</span>
+                </div>
+            </div>
+            
+            <div class="cover-stats">
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Categorias</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">120+</span>
+                    <span class="stat-label">Subcategorias</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2000+</span>
+                    <span class="stat-label">Linhas de Código</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cover-author">
+            <div class="author-name">Jhonnatan Luiz</div>
+            <div class="author-role">Frontend Developer</div>
+        </div>
+    </div>
+
+    <!-- Instruções -->
+    <div class="instructions">
+        <h2>📸 Como Capturar a Capa para LinkedIn</h2>
+        <ol>
+            <li><strong>Método 1 - Screenshot Manual:</strong>
+                <ul>
+                    <li>Pressione <code>F11</code> para modo tela cheia</li>
+                    <li>Use <code>Win + Shift + S</code> (Windows) ou <code>Cmd + Shift + 4</code> (Mac)</li>
+                    <li>Selecione apenas a área da capa colorida</li>
+                    <li>Salve como <code>frontend-roadmap-cover.png</code></li>
+                </ul>
+            </li>
+            <li><strong>Método 2 - Usando DevTools:</strong>
+                <ul>
+                    <li>Clique com botão direito na capa → Inspecionar</li>
+                    <li>No DevTools, clique com direito no elemento <code>.linkedin-cover</code></li>
+                    <li>Selecione "Capture node screenshot"</li>
+                </ul>
+            </li>
+            <li><strong>Método 3 - Extensão de Navegador:</strong>
+                <ul>
+                    <li>Instale "Awesome Screenshot" ou similar</li>
+                    <li>Capture apenas a área selecionada da capa</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <h2 style="margin-top: 30px;">📐 Especificações Técnicas</h2>
+        <ul>
+            <li><strong>Dimensões:</strong> 1584 x 396 pixels (formato oficial LinkedIn)</li>
+            <li><strong>Formato:</strong> PNG ou JPG</li>
+            <li><strong>Tamanho máximo:</strong> 8MB</li>
+            <li><strong>Uso:</strong> Imagem de capa para posts, artigos ou perfil</li>
+        </ul>
+
+        <h2 style="margin-top: 30px;">💡 Dicas de Uso no LinkedIn</h2>
+        <ul>
+            <li>Use como <strong>Featured Media</strong> no seu perfil</li>
+            <li>Anexe em posts sobre o projeto</li>
+            <li>Use na seção <strong>Projetos</strong> do LinkedIn</li>
+            <li>Compartilhe junto com link do GitHub</li>
+        </ul>
+    </div>
+
+    <script>
+        // Opcional: Adicionar botão de download via canvas (avançado)
+        console.log('💡 Dica: Use F11 para tela cheia e capture a imagem com melhor qualidade!');
+        console.log('📏 Dimensões da capa: 1584 x 396 pixels (padrão LinkedIn)');
+    </script>
+</body>
+</html>
