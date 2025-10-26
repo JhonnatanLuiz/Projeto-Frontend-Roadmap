@@ -25,7 +25,7 @@
 5. Pressione ESC ou clique no X para sair
 
 **Código afetado**:
-- `frontend_roadmap.html`: Adicionado `#toggleFocusMode` button e `#focusModal` com navegação
+- `index.html`: Adicionado `#toggleFocusMode` button e `#focusModal` com navegação
 - `frontend_roadmap.css`: ~150 linhas de estilos para `.modal-focus`, `.focus-navigation`, `.btn-focus-nav`
 - `frontend_roadmap.js`: Métodos `toggleFocusMode()`, `startFocusMode()`, `showFocusTech()`, `focusNavigate()`
 
@@ -80,7 +80,7 @@
 - ✅ Melhor uso do espaço vertical
 
 **Código afetado**:
-- `frontend_roadmap.html`: Reorganização da ordem (botões → busca)
+- `index.html`: Reorganização da ordem (botões → busca)
 - `frontend_roadmap.css`: Padding reduzido, font-sizes ajustados, centralização com flexbox
 
 ---
@@ -126,7 +126,7 @@
 4. Seções sem resultados são ocultadas automaticamente
 
 **Código afetado**:
-- `frontend_roadmap.html`: Adicionado campo `#searchInput` e `#searchResults`
+- `index.html`: Adicionado campo `#searchInput` e `#searchResults`
 - `frontend_roadmap.css`: Estilos para `.search-container`, `.search-input`, `.search-match`, `.hidden`
 - `frontend_roadmap.js`: Método `filterTechnologies()` com lógica de busca
 
@@ -183,7 +183,7 @@
 4. No diálogo de impressão, selecione "Salvar como PDF"
 
 **Código afetado**:
-- `frontend_roadmap.html`: Botões `#exportJSON` e `#exportPDF`
+- `index.html`: Botões `#exportJSON` e `#exportPDF`
 - `frontend_roadmap.css`: Estilos para `.btn-export`
 - `frontend_roadmap.js`: Métodos `exportJSON()` e `exportPDF()`
 
@@ -237,7 +237,7 @@
 4. Feche com ESC ou clicando no X
 
 **Código afetado**:
-- `frontend_roadmap.html`: Modal `#statsModal`, botão `#showStats`
+- `index.html`: Modal `#statsModal`, botão `#showStats`
 - `frontend_roadmap.css`: Estilos para `.stats-grid`, `.category-chart`, `.progress-bar-chart`, `.modal-wide`
 - `frontend_roadmap.js`: Método `showStatistics()` com cálculo de estatísticas
 
@@ -277,7 +277,7 @@
 
 | Arquivo | Linhas Adicionadas | Mudanças Principais |
 |---------|-------------------|---------------------|
-| `frontend_roadmap.html` | ~20 | Campo de busca, botões de exportação, modal de estatísticas |
+| `index.html` | ~20 | Campo de busca, botões de exportação, modal de estatísticas |
 | `frontend_roadmap.css` | ~180 | Estilos para busca, botões, gráficos, modal amplo |
 | `frontend_roadmap.js` | ~220 | Métodos de busca, exportação e estatísticas |
 | `CHANGELOG.md` | 450 | Este arquivo de documentação |

@@ -284,7 +284,7 @@ O roadmap está organizado em **12 categorias principais**:
 
 ```
 Frontend-roadmap/
-├── frontend_roadmap.html    # Estrutura HTML principal
+├── index.html               # Estrutura HTML principal
 ├── frontend_roadmap.css     # Estilos e temas
 ├── frontend_roadmap.js      # Lógica e dados das tecnologias
 └── README.md                # Documentação (este arquivo)
@@ -292,7 +292,7 @@ Frontend-roadmap/
 
 ### 📄 Detalhamento dos Arquivos
 
-#### `frontend_roadmap.html` (~1000 linhas)
+#### `index.html` (~1000 linhas)
 - Estrutura semântica com HTML5
 - 12 seções principais do roadmap
 - Mais de 100 nós de tecnologias organizados hierarquicamente
@@ -379,13 +379,13 @@ Frontend-roadmap/
 ### Opção 1: Download Direto
 
 1. Faça o download dos arquivos:
-   - `frontend_roadmap.html`
+   - `index.html`
    - `frontend_roadmap.css`
    - `frontend_roadmap.js`
 
 2. Coloque todos os arquivos na **mesma pasta**
 
-3. Abra o arquivo `frontend_roadmap.html` em seu navegador
+3. Abra o arquivo `index.html` em seu navegador
 
 ### Opção 2: Git Clone
 
@@ -398,13 +398,13 @@ cd Frontend-roadmap
 
 # Abra o arquivo HTML no navegador
 # Windows
-start frontend_roadmap.html
+start index.html
 
 # macOS
-open frontend_roadmap.html
+open index.html
 
 # Linux
-xdg-open frontend_roadmap.html
+xdg-open index.html
 ```
 
 ### Opção 3: Live Server (Recomendado para desenvolvimento)
@@ -412,7 +412,7 @@ xdg-open frontend_roadmap.html
 Se você usa **VS Code**:
 
 1. Instale a extensão **Live Server**
-2. Clique com botão direito em `frontend_roadmap.html`
+2. Clique com botão direito em `index.html`
 3. Selecione **"Open with Live Server"**
 
 ---
@@ -527,7 +527,7 @@ Contribuições são muito bem-vindas! Aqui estão algumas formas de contribuir:
 ### 🆕 Adicionar Tecnologias
 1. Fork o projeto
 2. Adicione a tecnologia no objeto `techData` em `frontend_roadmap.js`
-3. Adicione o nó HTML correspondente em `frontend_roadmap.html`
+3. Adicione o nó HTML correspondente em `index.html`
 4. Teste localmente
 5. Abra um Pull Request
 
