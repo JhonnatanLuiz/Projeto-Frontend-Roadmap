@@ -52,7 +52,9 @@ Para hospedar o roadmap online gratuitamente:
 4. Clique em **Save**
 5. Aguarde alguns minutos
 6. Seu roadmap estará disponível em:
-   `https://jhonnatanluiz.github.io/Projeto-Frontend-Roadmap/frontend_roadmap.html`
+   `https://jhonnatanluiz.github.io/Projeto-Frontend-Roadmap/`
+   
+   **Nota**: Como o arquivo principal foi renomeado para `index.html`, o GitHub Pages irá servir automaticamente este arquivo como página inicial, sem necessidade de especificar o nome do arquivo na URL.
 
 ## 📊 Estatísticas do Projeto
 
