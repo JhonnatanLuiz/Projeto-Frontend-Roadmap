@@ -5040,6 +5040,73 @@ let roadmap;
 document.addEventListener('DOMContentLoaded', () => {
     roadmap = new RoadmapManager();
     
+    // ============================================
+    // MENU HAMBÚRGUER (RESPONSIVO)
+    // ============================================
+    const menuToggle = document.getElementById('menuToggle');
+    const headerActions = document.getElementById('headerActions');
+    
+    if (menuToggle && headerActions) {
+        // Toggle do menu
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isActive = headerActions.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isActive);
+            
+            // Previne scroll quando menu está aberto
+            if (isActive) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Fecha menu ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (headerActions.classList.contains('active')) {
+                if (!headerActions.contains(e.target) && !menuToggle.contains(e.target)) {
+                    headerActions.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+        
+        // Fecha menu ao clicar em qualquer botão dentro dele
+        headerActions.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    headerActions.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Fecha menu ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && headerActions.classList.contains('active')) {
+                headerActions.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Remove classes ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                headerActions.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
     console.log('%c🗺️ Frontend Roadmap 2025', 'font-size: 20px; font-weight: bold; color: #3b82f6;');
     console.log('%cDica: Dê duplo clique em qualquer tecnologia para marcar como concluída!', 'color: #10b981;');
 });
