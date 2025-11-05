@@ -32,7 +32,7 @@ Este guia mostra como capturar as melhores screenshots do projeto Frontend Roadm
 - Pelo menos 3-4 categorias visíveis
 
 **Como capturar:**
-1. Abrir `frontend_roadmap.html` no navegador
+1. Abrir `index.html` no navegador
 2. Rolar para o topo da página
 3. Pressionar `Win + Shift + S` (Windows) ou `Cmd + Shift + 4` (Mac)
 4. Selecionar área do header até a segunda seção
@@ -141,7 +141,7 @@ Este guia mostra como capturar as melhores screenshots do projeto Frontend Roadm
 ## 📊 Criar Apresentação em PDF
 
 ### Opção 1: Exportar Navegador como PDF
-1. Abrir `frontend_roadmap.html`
+1. Abrir `index.html`
 2. Pressionar `Ctrl + P` (Imprimir)
 3. Selecionar "Salvar como PDF"
 4. Configurar:

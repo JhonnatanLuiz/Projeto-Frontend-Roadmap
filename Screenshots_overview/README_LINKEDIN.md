@@ -89,7 +89,7 @@ Duplo clique em: capa-linkedin.html
 4. Salve como `frontend-roadmap-cover.png`
 
 ### **PASSO 2: Capturar Screenshots** (10 minutos)
-1. Abra `frontend_roadmap.html` no navegador
+1. Abra `index.html` no navegador
 2. Siga as instruções de `GUIA_SCREENSHOT.md`
 3. Capture as 5 imagens principais:
    - ✅ `frontend-roadmap-overview.png` (visão geral)
